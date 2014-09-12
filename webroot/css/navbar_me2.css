@@ -1,0 +1,88 @@
+/**
+ * Based on http://dbwebb.se/coachen/en-navbar-med-drop-down-meny-i-ren-html-och-css
+ * Changed to only style li-items instead of a.
+ */
+.navbar {
+  position: fixed;
+  max-width: 980px;
+  margin: 0 auto;
+  top: 80px;
+  z-index: 1;
+  font-size: 1.6em;
+}
+ 
+.navbar ul {
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+ 
+.navbar li {
+  margin-bottom: -0.2em;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 10em;
+  background-color: #6D97BF;
+  border-bottom-left-radius: 15px;
+  -moz-border-bottom-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  -moz-border-bottom-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  box-shadow: 0px 0px 10px #333;
+  -moz-box-shadow: 0px 0px 10px #333;
+  -webkit-box-shadow: 0px 0px 10px #333;
+}
+ 
+.navbar a {
+  display: block;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap; 
+}
+
+.navbar > ul > li:hover > a,
+.navbar .selected-parent > a,
+.navbar > ul > .selected > a {
+  padding-top: 2em;
+} 
+ 
+.navbar li.selected-parent, 
+.navbar > ul > li.selected {
+  border-bottom: .2em solid #21394C;
+}
+
+.navbar ul ul {
+  position: absolute; 
+  left: -9999px; 
+  z-index: -1;
+}
+ 
+.navbar li:hover ul {
+  left: 0;
+}
+ 
+.navbar li li {
+  min-width: 8.5em;
+  margin: .1em 0.5em;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 0px 0px 5px #333;
+  -moz-box-shadow: 0px 0px 5px #333;
+  -webkit-box-shadow: 0px 0px 5px #333;
+}
+
+.navbar li li a {
+  padding: 0.5em;
+}
+
+.navbar li li:hover {
+}
+
+.navbar li li.selected {
+  border: .1em solid #21394C;
+}
