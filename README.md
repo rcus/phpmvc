@@ -32,5 +32,13 @@ The following external modules are included and subject to its own license.
 * Path: included in `3pp/php-markdown`
 
 
+History
+----------------------------------
+
+
+### v1.0
+* First release for Kmom01.
+
+
 ----------------------------------
 Copyright (c) 2014 Marcus Törnroth
