@@ -17,7 +17,7 @@
         "php": ">=5.4"
     },
     "require-dev": {
-        "satooshi/php-coveralls": "dev-master"
+        "satooshi/php-coveralls": "dev-master",
         "phpmvc/comment": "dev-master"
     }
 }
