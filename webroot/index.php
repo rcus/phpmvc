@@ -25,6 +25,20 @@ for($i = 1; $i <= 7; $i++) {
             'content' => $content,
             'byline' => $byline,
         ]);
+
+        $app->dispatcher->forward([
+            'controller' => 'comment',
+            'action'     => 'view',
+            'params'     => [$kmom]
+        ]);
+
+        $app->views->add('comment/form', [
+            'mail'      => null,
+            'web'       => null,
+            'name'      => null,
+            'content'   => null,
+            'output'    => null,
+        ]);
     }, $kmom);
 }
 
@@ -35,7 +49,20 @@ $app->router->add('myDice', function() use ($app) {
     $app->views->add('me/dice', [
         'dice' => $dice,
     ]);
- 
+
+    $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
+        'params'     => ['myDice']
+    ]);
+
+    $app->views->add('comment/form', [
+        'mail'      => null,
+        'web'       => null,
+        'name'      => null,
+        'content'   => null,
+        'output'    => null,
+    ]);
 });
 
 $app->router->add('source', function() use ($app) {

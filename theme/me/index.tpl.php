@@ -2,7 +2,7 @@
 <html class='no-js' lang='<?=$lang?>'>
 <head>
 <meta charset='utf-8'/>
-<title><?=$title . $title_append?></title>
+<title><?= (isset($title)) ? $title . $title_append : $title_append;?></title>
 <?php if(isset($favicon)): ?><link rel='icon' href='<?=$this->url->asset($favicon)?>'/>
 <?php endif; ?>
 <?php foreach($stylesheets as $stylesheet): ?>
