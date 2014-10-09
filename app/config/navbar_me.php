@@ -21,7 +21,7 @@ return [
         // This is a menu item
         'kmom01'  => [
             'text'  => 'Redovisning',   
-            'url'   => 'kmom02',   
+            'url'   => 'kmom03',   
             'title' => 'Såhär gjorde jag',
             'submenu' => [
 
@@ -41,14 +41,14 @@ return [
                         'title' => 'Kontroller och Modeller'
                     ],
 
-/*                    // This is a menu item of the submenu
+                    // This is a menu item of the submenu
                     'kmom03'  => [
                         'text'  => 'Kmom03',   
                         'url'   => 'kmom03',  
                         'title' => 'Bygg ett eget tema'
                     ],
 
-                    // This is a menu item of the submenu
+/*                    // This is a menu item of the submenu
                     'kmom04'  => [
                         'text'  => 'Kmom04',   
                         'url'   => 'kmom04',  

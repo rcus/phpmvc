@@ -9,7 +9,7 @@ ErrorDocument 404 "This is a Anax 404. Document is not here."
   # Use RewriteBase below on www.student.bth.se
   # RewriteBase /~matg12/phpmvc/webroot/
   # Use RewriteBase below on localhost
-  RewriteBase /phpmvc/webroot/
+  RewriteBase /
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
