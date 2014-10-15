@@ -1,0 +1,85 @@
+@media (min-width: 768px) {
+
+  @nav-li-width: 140px;
+  @nav-li-li-width: 122px;
+
+  #navbar {
+    position: fixed;
+    top: @magicNumber*3;
+    z-index: 1;
+  }
+   
+  .navbar ul {
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+  }
+   
+  .navbar li {
+    margin-bottom: -0.2em;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: @nav-li-width;
+    background-color: #6D97BF;
+    border-bottom-left-radius: 15px;
+    -moz-border-bottom-left-radius: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -moz-border-bottom-right-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    box-shadow: 0px 0px 8px #333;
+    -moz-box-shadow: 0px 0px 8px #333;
+    -webkit-box-shadow: 0px 0px 8px #333;
+  }
+   
+  .navbar a {
+    display: block;
+    padding: .6em;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap; 
+  }
+
+  .navbar > ul > li:hover > a,
+  .navbar .selected-parent > a,
+  .navbar > ul > .selected > a {
+    padding-top: 1.5em;
+  } 
+   
+  .navbar li.selected-parent, 
+  .navbar > ul > li.selected {
+    border-bottom: .2em solid #21394C;
+  }
+
+  .navbar ul ul {
+    position: absolute; 
+    left: -9999px; 
+    z-index: -1;
+  }
+   
+  .navbar li:hover ul {
+    left: 0;
+  }
+   
+  .navbar li li {
+    width: @nav-li-li-width;
+    margin: .1em 0.5em;
+    border: .1em solid #6D97BF;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0px 0px 5px #333;
+    -moz-box-shadow: 0px 0px 5px #333;
+    -webkit-box-shadow: 0px 0px 5px #333;
+  }
+
+  .navbar li li a {
+    padding: 0.3em;
+  }
+
+  .navbar li li.selected {
+    border: .1em solid #21394C;
+  }
+}

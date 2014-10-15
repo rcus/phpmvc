@@ -1,0 +1,102 @@
+/* Advanced Checkbox Hack */
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  from {
+    padding:0;
+  }
+  to {
+    padding:0;
+  }
+}
+
+
+/* hide checkbox, style label */
+nav[role="custom-dropdown"] input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+nav[role="custom-dropdown"] label { 
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* for small screens */
+@media screen and (max-width: 767px) {
+
+
+  /* remove margins */
+  #navbar {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+
+  /* menu-button (label) */
+  nav[role="custom-dropdown"] label {
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 2.5em;
+    padding: 0;
+    margin: 0;
+    background-color: #6D97BF;
+  }
+
+  nav[role="custom-dropdown"] label:after {
+    position: absolute;
+    right: .25em;
+    top: 0;
+    content: "\2261";
+    font-size: 1.8em;
+  }
+
+
+  /* menu */
+  nav[role="custom-dropdown"] a {
+    display: block;
+    padding: .55em .55em;
+    color: #21394C;
+    text-decoration: none;
+  }
+
+  nav[role="custom-dropdown"] a:after {
+    position: absolute;
+    right: 1em;
+    content: "\203A";
+  }
+
+  nav[role="custom-dropdown"] ul {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    background-color: #6D97BF;
+  }
+
+  nav[role="custom-dropdown"] ul li {
+    border-top: 1px solid #21394C;
+  }
+
+  nav[role="custom-dropdown"] ul ul li {
+    border-left: .55em solid #21394C;
+  }
+
+  nav[role="custom-dropdown"] li.selected > a,
+  nav[role="custom-dropdown"] li.selected-parent > a {
+    color: #fff;
+  }
+
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul,
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul ul {
+    display: block;
+  }
+
+}

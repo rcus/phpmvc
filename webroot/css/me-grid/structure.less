@@ -1,0 +1,186 @@
+/**
+ * General
+ */
+
+body {
+  color: #21394C;
+  background-color: #C4CFE1;
+  overflow-y: scroll;
+}
+
+#wrapper {
+  max-width: @gridsystem-width;
+  margin: 0 auto 2em;
+  padding-top: @magicNumber*6;
+  background-color: #E7ECF9;
+  box-shadow: 0px 0px 20px #333;
+  -moz-box-shadow: 0px 0px 20px #333;
+  -webkit-box-shadow: 0px 0px 20px #333;
+}
+
+
+/**
+ * Layout for header
+ */
+
+#header {
+  position: fixed;
+  width: 100%;
+  min-height: @magicNumber*3; 
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 0px 20px #333;
+  -moz-box-shadow: 0px 0px 20px #333;
+  -webkit-box-shadow: 0px 0px 20px #333;
+  color: #E7ECF9;
+  background-color: #21394C;
+  z-index: 100;
+}
+
+#header div {
+  //position: absolute;
+  max-width: @gridsystem-width - @gutter-width;
+  margin: 0 auto;
+}
+
+.sitetitle {
+  //position: fixed;
+  //top: 6px;
+  margin-bottom: 0;
+  padding-top: 0.25*@magicNumber;
+  padding-bottom: 0.25*@magicNumber;
+  text-align: center;
+  font-family: @fontFamilySiteTitle;
+  font-size: @fontSizeSiteTitle;
+  white-space: nowrap;
+}
+
+.sitetitle a,
+.sitetitle a:hover {
+  color: #E7ECF9;
+  text-decoration: none;
+}
+
+.siteslogan {
+  position: absolute;
+  top: 50px;
+}
+
+
+/**
+ * General elements
+ */
+
+h1, h2, h3, h4 {
+  color: #21394C;
+}
+
+h1, h2 {
+  border-bottom: 1px solid #21394C;
+}
+
+a {
+  color: #6D97BF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/**
+ * Layout for main
+ */
+
+#main {
+//  min-height: 20em;
+//  padding-top: 11em;
+//  font-size: 1.2em;
+}
+
+/**
+ * For articles
+ */
+
+.article {
+}
+
+.byline {
+  margin-top: @magicNumber*2;
+  border-top: 2px dashed #21394C;
+  padding-top: 22px;
+}
+
+.byline p {
+  min-height: 100px;
+  font-size: @fontSizeSmall;
+  font-style: italic;
+}
+
+.byline img {
+  float: left;
+  border: 2px solid;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  margin-right: @magicNumber;
+}
+
+.byline a.fa {
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: @fontSizeH2;
+  color: #21394C;
+}
+
+.byline a.fa:hover {
+  color: #6D97BF;
+  text-decoration: none;
+}
+
+/**
+ * For comments
+ */
+
+.comment {
+//  min-height: 80px;
+}
+
+.comment img {
+  float: left;
+  margin-top: 14px;
+  margin-left: 15px;
+}
+
+.comment h4 {
+  margin-top: 14px;
+  margin-bottom: 0;
+  margin-left: 80px;
+}
+
+.comment .links {
+  margin-left: 80px;
+  font-size: @fontSizeSmall;
+}
+
+.comment p {
+  margin-left: 80px;
+}
+
+.comment-form {
+  max-width: 700px;
+}
+
+/**
+ * Layout for footer
+ */
+
+#footer {
+}
+
+.sitefooter {
+  margin-top: 0.5*@magicNumber;
+  border-top: 2px solid #21394C;
+  padding: 0.5*@magicNumber 0;
+  .font-size(@fontSizeSmall);
+}
