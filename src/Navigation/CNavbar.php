@@ -25,9 +25,11 @@ class CNavbar
     {
         // Keep default options in an array and merge with incoming options that can override the defaults.
         $default = array(
-          'id'      => null,
-          'class'   => null,
-          'wrapper' => 'nav',
+          'id'         => null,
+          'class'      => null,
+          'role'       => null,
+          'in_wrapper' => null,
+          'wrapper'    => 'nav',
           'create_url' => function($url) {
             return $url;
           },
@@ -74,8 +76,10 @@ class CNavbar
         // Set the id & class element, only if it exists in the menu-array
         $id      = isset($menu['id'])    ? " id='{$menu['id']}'"       : null;
         $class   = isset($menu['class']) ? " class='{$menu['class']}'" : null;
+        $role    = isset($menu['role'])  ? " role='{$menu['role']}'"   : null;
         $wrapper = $menu['wrapper'];
+        $in_wrapper = isset($menu['in_wrapper'])  ? "{$menu['in_wrapper']}\n"   : null;
 
-        return "\n<{$wrapper}{$id}{$class}>{$html}</{$wrapper}>\n";
+        return "\n<{$wrapper}{$id}{$class}{$role}>{$in_wrapper}{$html}</{$wrapper}>\n";
     }
 }

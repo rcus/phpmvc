@@ -19,12 +19,18 @@ for($i = 1; $i <= 7; $i++) {
     $kmom = "kmom0" . $i;
     $app->router->add($kmom, function() use ($app, $kmom) {
         $app->theme->setTitle(ucfirst($kmom));
+
         $content = $app->textFilter->doFilter($app->fileContent->get($kmom.'.md'), 'shortcode, markdown');
         $byline  = $app->textFilter->doFilter($app->fileContent->get('by_marcus.md'), 'shortcode, markdown');
         $app->views->add('me/page', [
             'content' => $content,
-            'byline' => $byline,
+            'byline' => $byline
         ]);
+
+        $sidebar = $app->textFilter->doFilter($app->fileContent->get('kmom-sidebar.md'), 'shortcode, markdown');
+        $app->views->add('me/page', [
+            'content' => $sidebar,
+        ], 'sidebar');
 
         $app->dispatcher->forward([
             'controller' => 'comment',
@@ -65,6 +71,58 @@ $app->router->add('myDice', function() use ($app) {
     ]);
 });
 
+$app->router->add('regions', function() use ($app) {
+ 
+    $app->theme->setTitle("Regioner");
+    $app->theme->addStylesheet('css/me-grid/theme_grid.css');
+    $app->theme->addStylesheet('css/me-grid/theme_regions.css');
+ 
+    $app->views->addString('flash', 'flash')
+               ->addString('featured-1', 'featured-1')
+               ->addString('featured-2', 'featured-2')
+               ->addString('featured-3', 'featured-3')
+               ->addString('main-fullwidth', 'main-fullwidth')
+               ->addString('main', 'main')
+               ->addString('sidebar', 'sidebar')
+               ->addString('triptych-1', 'triptych-1')
+               ->addString('triptych-2', 'triptych-2')
+               ->addString('triptych-3', 'triptych-3')
+               ->addString('footer-col-1', 'footer-col-1')
+               ->addString('footer-col-2', 'footer-col-2')
+               ->addString('footer-col-3', 'footer-col-3')
+               ->addString('footer-col-4', 'footer-col-4');
+});
+
+$app->router->add('typo', function() use ($app) {
+ 
+    $app->theme->setTitle("Typografi");
+    $app->theme->addStylesheet('css/me-grid/theme_grid.css');
+
+    $content = $app->fileContent->get('typography.html');
+    $sidebar = $app->fileContent->get('typography.html');
+    $app->views->add('me/page', [
+        'content' => $content,
+    ]);
+    $app->views->add('me/page', [
+        'content' => $sidebar
+    ], 'sidebar');
+});
+
+$app->router->add('awesome', function() use ($app) {
+ 
+    $app->theme->setTitle("Font Awesome");
+    $app->theme->addStylesheet('css/me-grid/theme_grid.css');
+
+    $content = $app->textFilter->doFilter($app->fileContent->get('awesome-main.md'), 'shortcode, markdown');
+    $sidebar = $app->textFilter->doFilter($app->fileContent->get('awesome-sidebar.md'), 'shortcode, markdown');
+    $app->views->add('me/page', [
+        'content' => $content,
+    ]);
+    $app->views->add('me/page', [
+        'content' => $sidebar
+    ], 'sidebar');
+});
+
 $app->router->add('source', function() use ($app) {
     $app->theme->setTitle("Källkod");
     $app->theme->addStylesheet('css/source.css');
@@ -74,9 +132,9 @@ $app->router->add('source', function() use ($app) {
         'add_ignore' => ['.htaccess'],
     ]);
     $app->views->add('me/source', [
-        'content' => $source->View(),
-    ]);
- 
+        'content' => $source->View()
+    ], 'main-fullwidth');
 });
+
 $app->router->handle();
 $app->theme->render();

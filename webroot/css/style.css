@@ -74,14 +74,14 @@ h1 {
 /**
  * For articles
  */
-.article1 {
+.article {
   width: 700px;
   border-right: 1px solid #ccc;
   padding-right: 1em;
 }
 
-.article1 h1,
-.article1 h2 {
+.article h1,
+.article h2 {
   border-bottom: 1px solid #ccc;
 }
 

@@ -7,6 +7,8 @@ return [
 
     // Use for styling the menu
     'class' => 'navbar',
+    'role' => 'custom-dropdown',
+    'in_wrapper' => '<input type="checkbox" id="button"><label for="button" onclick></label>',
  
     // Here comes the menu strcture
     'items' => [
@@ -19,7 +21,7 @@ return [
         ],
  
         // This is a menu item
-        'kmom01'  => [
+        'kmom03'  => [
             'text'  => 'Redovisning',   
             'url'   => 'kmom03',   
             'title' => 'Såhär gjorde jag',
@@ -86,6 +88,39 @@ return [
             'title' => 'Spela tärning'
         ],
  
+        // This is a menu item
+        'theme' => [
+            'text'  => 'Tema', 
+            'url'   => 'regions',  
+            'title' => 'Eget tema',
+            'submenu' => [
+
+                'items' => [
+
+                    // This is a menu item of the submenu
+                    'regions'  => [
+                        'text'  => 'Regioner',
+                        'url'   => 'regions',
+                        'title' => 'Visa regioner'
+                    ],
+
+                    // This is a menu item of the submenu
+                    'typo'  => [
+                        'text'  => 'Typografi',
+                        'url'   => 'typo',
+                        'title' => 'Visa typografier'
+                    ],
+
+                    // This is a menu item of the submenu
+                    'awesome'  => [
+                        'text'  => 'Font Awesome',
+                        'url'   => 'awesome',
+                        'title' => 'Visa Font Awesome'
+                    ],
+
+                ],
+            ],
+        ],
         // This is a menu item
         'source' => [
             'text'  => 'Källkod', 

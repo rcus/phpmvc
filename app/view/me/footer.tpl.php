@@ -1,3 +1,2 @@
-<footer>
-    <span class='sitefooter'>© 2014 Marcus Törnroth</span>
-</footer>
+
+ <i class="fa fa-copyright"></i> 2014 Marcus Törnroth

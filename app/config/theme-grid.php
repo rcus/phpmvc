@@ -46,7 +46,8 @@ return [
         'title_append' => ' | Marcus Törnroth',
 
         // Stylesheets
-        'stylesheets' => ['css/me-grid/style.php', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'],
+        //'stylesheets' => ['css/me-grid/style.php', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'],
+        'stylesheets' => ['css/me-grid/style.php'],
 
         // Inline style
         'style' => null,
@@ -67,4 +68,3 @@ return [
         'google_analytics' => null,
     ],
 ];
-

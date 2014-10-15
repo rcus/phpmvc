@@ -36,6 +36,16 @@ History
 ----------------------------------
 
 
+### v3.0
+* Release for Kmom03.
+* Now with responsive theme, driven by LESS together with lessphp.
+
+
+### v2.0
+* Release for Kmom02.
+* New feature: Comments.
+
+
 ### v1.0
 * First release for Kmom01.
 
