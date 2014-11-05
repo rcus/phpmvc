@@ -23,10 +23,9 @@ return [
         // This is a menu item
         'kmom03'  => [
             'text'  => 'Redovisning',   
-            'url'   => 'kmom03',   
+            'url'   => 'kmom04',   
             'title' => 'Såhär gjorde jag',
             'submenu' => [
-
                 'items' => [
 
                     // This is a menu item of the submenu
@@ -50,14 +49,14 @@ return [
                         'title' => 'Bygg ett eget tema'
                     ],
 
-/*                    // This is a menu item of the submenu
+                    // This is a menu item of the submenu
                     'kmom04'  => [
                         'text'  => 'Kmom04',   
                         'url'   => 'kmom04',  
                         'title' => 'Databasdrivna modeller'
                     ],
 
-                    // This is a menu item of the submenu
+/*                    // This is a menu item of the submenu
                     'kmom05'  => [
                         'text'  => 'Kmom05',   
                         'url'   => 'kmom05',  
@@ -81,20 +80,19 @@ return [
             ],
         ],
  
-        // This is a menu item
+/*        // This is a menu item
         'dice' => [
             'text'  => 'Tärning',
             'url'   => 'myDice',
             'title' => 'Spela tärning'
         ],
- 
+*/ 
         // This is a menu item
         'theme' => [
             'text'  => 'Tema', 
             'url'   => 'regions',  
             'title' => 'Eget tema',
             'submenu' => [
-
                 'items' => [
 
                     // This is a menu item of the submenu
@@ -121,6 +119,33 @@ return [
                 ],
             ],
         ],
+
+        // This is a menu item
+        'users' => [
+            'text'  => 'Användare', 
+            'url'   => 'users',  
+            'title' => 'Hantera användare',
+            'submenu' => [
+                'items' => [
+
+                    // This is a menu item of the submenu
+                    'add'  => [
+                        'text'  => 'Lägg till',
+                        'url'   => 'users/add',
+                        'title' => 'Lägg till användare'
+                    ],
+
+                    // This is a menu item of the submenu
+                    'setup'  => [
+                        'text'  => 'Återställ',
+                        'url'   => 'users/setup',
+                        'title' => 'Återställ databasen'
+                    ],
+
+                ],
+            ],
+        ],
+
         // This is a menu item
         'source' => [
             'text'  => 'Källkod', 

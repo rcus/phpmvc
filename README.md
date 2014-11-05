@@ -35,6 +35,10 @@ The following external modules are included and subject to its own license.
 History
 ----------------------------------
 
+### v4.0
+* Release for Kmom04.
+* Users and comments stored i database.
+
 
 ### v3.0
 * Release for Kmom03.

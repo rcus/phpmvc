@@ -13,6 +13,10 @@ $app->router->add('', function() use ($app) {
         'content' => $content,
         'byline' => $byline
     ]);
+
+    $app->dispatcher->forward([
+        'controller' => 'comments'
+    ]);
 });
 
 for($i = 1; $i <= 7; $i++) {
@@ -33,17 +37,8 @@ for($i = 1; $i <= 7; $i++) {
         ], 'sidebar');
 
         $app->dispatcher->forward([
-            'controller' => 'comment',
-            'action'     => 'view',
+            'controller' => 'comments',
             'params'     => [$kmom]
-        ]);
-
-        $app->views->add('comment/form', [
-            'mail'      => null,
-            'web'       => null,
-            'name'      => null,
-            'content'   => null,
-            'output'    => null,
         ]);
     }, $kmom);
 }
@@ -57,17 +52,8 @@ $app->router->add('myDice', function() use ($app) {
     ]);
 
     $app->dispatcher->forward([
-        'controller' => 'comment',
-        'action'     => 'view',
+        'controller' => 'comments',
         'params'     => ['myDice']
-    ]);
-
-    $app->views->add('comment/form', [
-        'mail'      => null,
-        'web'       => null,
-        'name'      => null,
-        'content'   => null,
-        'output'    => null,
     ]);
 });
 
@@ -121,6 +107,12 @@ $app->router->add('awesome', function() use ($app) {
     $app->views->add('me/page', [
         'content' => $sidebar
     ], 'sidebar');
+});
+
+$app->router->add('form', function() use ($app) {
+
+    $app->theme->setTitle("CForm");
+
 });
 
 $app->router->add('source', function() use ($app) {
