@@ -56,14 +56,14 @@ return [
                         'title' => 'Databasdrivna modeller'
                     ],
 
-/*                    // This is a menu item of the submenu
+                    // This is a menu item of the submenu
                     'kmom05'  => [
                         'text'  => 'Kmom05',   
                         'url'   => 'kmom05',  
                         'title' => 'Bygg ut ramverket'
                     ],
 
-                    // This is a menu item of the submenu
+/*                    // This is a menu item of the submenu
                     'kmom06'  => [
                         'text'  => 'Kmom06',   
                         'url'   => 'kmom06',  
