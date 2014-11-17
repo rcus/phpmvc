@@ -23,7 +23,7 @@ return [
         // This is a menu item
         'kmom03'  => [
             'text'  => 'Redovisning',   
-            'url'   => 'kmom04',   
+            'url'   => 'kmom05',   
             'title' => 'Såhär gjorde jag',
             'submenu' => [
                 'items' => [
