@@ -17,3 +17,4 @@ Thumbs.db
 
 # Package handling
 composer.lock
+vendor/
