@@ -21,9 +21,9 @@ return [
         ],
  
         // This is a menu item
-        'kmom03'  => [
+        'kmom06'  => [
             'text'  => 'Redovisning',   
-            'url'   => 'kmom05',   
+            'url'   => 'kmom06',
             'title' => 'Såhär gjorde jag',
             'submenu' => [
                 'items' => [
@@ -63,14 +63,14 @@ return [
                         'title' => 'Bygg ut ramverket'
                     ],
 
-/*                    // This is a menu item of the submenu
+                    // This is a menu item of the submenu
                     'kmom06'  => [
                         'text'  => 'Kmom06',   
                         'url'   => 'kmom06',  
                         'title' => 'Verktyg och Continuous integration (CI)'
                     ],
 
-                    // This is a menu item of the submenu
+/*                    // This is a menu item of the submenu
                     'kmom07'  => [
                         'text'  => 'Kmom07/10',   
                         'url'   => 'kmom07',  
