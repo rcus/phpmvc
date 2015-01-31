@@ -1,2 +1,2 @@
 
- <i class="fa fa-copyright"></i> 2014 Marcus Törnroth
+ <i class="fa fa-copyright"></i> 2015 Marcus Törnroth

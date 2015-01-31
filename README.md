@@ -35,6 +35,10 @@ The following external modules are included and subject to its own license.
 History
 ----------------------------------
 
+### v7.0
+* Release for Kmom07.
+
+
 ### v6.0
 * Release for Kmom06.
 
@@ -63,4 +67,4 @@ History
 
 
 ----------------------------------
-Copyright (c) 2014 Marcus Törnroth
+Copyright (c) 2015 Marcus Törnroth
